@@ -1,23 +1,31 @@
-
 package MainFrame.ChessFrame.players.Pieces;
+
 import java.awt.Image;
 import java.awt.Toolkit;
 
+/**
+ * pieceIcon
+ */
 public class pieceIcon {
-    private Toolkit kit=Toolkit.getDefaultToolkit();
-    private Image image;
-    
-    
-    public pieceIcon(String NameIcon) //throws IOException
-    {
-        
-        image=kit.getImage(NameIcon);
-    }
-    
-    public Image returnPieceIcon() {
-        return image;
-    }
-    
-    
-   
+  private Toolkit kit = Toolkit.getDefaultToolkit();
+  private Image image;
+  
+  /**
+   * pieceIcon
+   * 
+   * @param NameIcon
+   */
+  public pieceIcon(String NameIcon) {
+    image = kit.getImage( NameIcon);
+  }
+  
+  /**
+   * returnPieceIcon
+   * 
+   * @return
+   */
+  public Image returnPieceIcon() {
+    return image;
+  }
+  
 }
