@@ -17,20 +17,23 @@ public class ThreadTimer extends Thread {
     myScreen.setText( Short.toString( mytime) + " Seconds");
   }
   
-  @SuppressWarnings("deprecation")
+  //@SuppressWarnings("deprecation")
   public void run() {
     while (true) {
       mytime -= 0.1;
       try {
         Thread.sleep( 1000); // was this.sleep( 1000);
       } catch (InterruptedException ex) {
-        ex.printStackTrace();
+        //ex.printStackTrace();
       }
       myScreen.setText( Float.toString( mytime) + " Seconds");
-      if (mytime == 0) {
+      if (mytime <= 0) {
         JOptionPane.showConfirmDialog( null, " Game Over!\n Timeout", "Timeout",
             JOptionPane.DEFAULT_OPTION);
-        stop(); // TODO: many deprecated methods we need to sort out.
+        /**stop(); deprecated no easy way to simply terminate a thread
+        * using Thread.interrupt() instead of stop to end thread not deprecated
+        * @author ryan*/
+        this.interrupt();
         System.out.println( "TimeOut");
         break;
       }

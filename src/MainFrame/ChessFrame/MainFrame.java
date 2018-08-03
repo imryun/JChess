@@ -20,11 +20,15 @@ public class MainFrame extends JFrame {
     contentPane.add( Toolpanel);
     
     MyChessBar = new Chess_MainMenuBar( this);
+    contentPane.add( Mainpanel);
     setJMenuBar( MyChessBar);
     setVisible( true);
     setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE);
   }
   
+  /**
+   * start_Again
+   */
   public void start_Again() {
     Mainpanel.start_Again();
     contentPane.add( Mainpanel);

@@ -229,7 +229,6 @@ class mybutton extends JButton {
   private static final long serialVersionUID = 1L;
   
   mybutton() {
-    
     setSize( 80, 30);
     setLocation( 50, 230);
     setText( "Send");
@@ -248,8 +247,7 @@ class myTextFiled extends JTextField {
     setLocation( 10, 200);
     
     add( TextAreaScroll);
-    this.setToolTipText( "Write Text Here");
-    
+    this.setToolTipText( "Write Text Here");    
   }
   
   private final JScrollPane TextAreaScroll = new JScrollPane();
