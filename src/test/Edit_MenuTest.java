@@ -1,19 +1,15 @@
 package test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import MainFrame.ChessMenuBar.ChessBar_Menus.Edit_Menu;
+
 class Edit_MenuTest {
-  
-  @BeforeEach
-  void setUp() throws Exception {
-  }
-  
+  Edit_Menu em = new Edit_Menu();
   @Test
   void testEdit_Menu() {
-    fail( "Not yet implemented"); // TODO
+    assertEquals("Edit", em.getText());
   }
   
 }

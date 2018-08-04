@@ -2,18 +2,15 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import MainFrame.ChessMenuBar.ChessBar_Menus.Menu_Items.File_MenuItems.Save_Item;
+
 class Save_ItemTest {
-  
-  @BeforeEach
-  void setUp() throws Exception {
-  }
-  
+  Save_Item si = new Save_Item();
   @Test
   void testSave_Item() {
-    fail( "Not yet implemented"); // TODO
+    assertEquals("Save Game", si.getText());
   }
   
 }

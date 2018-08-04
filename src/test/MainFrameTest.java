@@ -1,47 +1,42 @@
 package test;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-
 import MainFrame.ChessFrame.MainFrame;
 
 class MainFrameTest {
-
-    MainFrame m;
+  
+  MainFrame m = new MainFrame();
+  
+  @Test
+  public void testStart_Again() {
+    try {
+      m.start_Again();
+    } catch (Exception ed) {
+      fail( ed);
+    }
+  }
+  
+  @Test
+  public void testStart_As_Server() {
     
-    @BeforeClass
-    public static void setUpBeforeClass() throws Exception {
-    }
-
-    @AfterClass
-    public static void tearDownAfterClass() throws Exception {
-    }
-
-    @Before
-    public void setUp() throws Exception {
-        m = new MainFrame();
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
-
-    @Test
-    public void testStart_Again() {
-        m.start_Again();
+    try {
+      m.start_As_Server();
+    } catch (Exception ed) {
+      fail( ed);
     }
     
-    @Test
-    public void testStart_As_Server() {
-        m.start_As_Server();
+  }
+  
+  @Test
+  public void testStart_As_Client() {
+    
+    try {
+      m.start_As_Client();
+    } catch (Exception ed) {
+      fail( ed);
     }
-
-    @Test
-    public void testStart_As_Client() {
-        m.start_As_Client();
-    }
-        
+    
+  }
+  
 }

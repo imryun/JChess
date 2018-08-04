@@ -1,19 +1,15 @@
 package test;
-
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import MainFrame.ChessMenuBar.ChessBar_Menus.Menu_Items.Tool_MenuItems.Options;
+
 class OptionsTest {
-  
-  @BeforeEach
-  void setUp() throws Exception {
-  }
+  Options o = new Options();
   
   @Test
   void testOptions() {
-    fail( "Not yet implemented"); // TODO
+    assertEquals("Options",o.getText());
   }
   
 }

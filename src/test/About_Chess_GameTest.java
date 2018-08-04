@@ -1,19 +1,16 @@
 package test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import MainFrame.ChessMenuBar.ChessBar_Menus.Menu_Items.Help_MenuItems.About_Chess_Game;
 
 class About_Chess_GameTest {
   
-  @BeforeEach
-  void setUp() throws Exception {
-  }
-  
   @Test
   void testAbout_Chess_Game() {
-    fail( "Not yet implemented"); // TODO
+    About_Chess_Game g = new About_Chess_Game();
+    assertEquals( "About This Game", g.getText());
   }
   
 }

@@ -5,7 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import MainFrame.ChessFrame.MainFrame;
+import MainFrame.ChessMenuBar.Chess_MainMenuBar;
+
 class Chess_MainMenuBarTest {
+  Chess_MainMenuBar mmb = new Chess_MainMenuBar(new MainFrame());
   
   @BeforeEach
   void setUp() throws Exception {
@@ -13,17 +17,29 @@ class Chess_MainMenuBarTest {
   
   @Test
   void testChess_MainMenuBar() {
-    fail( "Not yet implemented"); // TODO
+    try { 
+      mmb.isDisplayable();
+    }catch(Exception ed ) {
+      fail(ed);
+    }
   }
   
   @Test
   void testGetIpAddress() {
-    fail( "Not yet implemented"); // TODO
+    try { 
+      assertEquals("127.0.0.1", mmb.getIpAddress() );
+    }catch(Exception ed ) {
+      fail(ed);
+    }
   }
   
   @Test
   void testGetPortnumber() {
-    fail( "Not yet implemented"); // TODO
+    try { 
+      assertEquals("5000", mmb.getPortnumber() );
+    }catch(Exception ed ) {
+      fail(ed);
+    }
   }
   
 }

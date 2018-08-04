@@ -1,19 +1,15 @@
 package test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import MainFrame.ChessMenuBar.ChessBar_Menus.Menu_Items.File_MenuItems.Load_Item;
+
 class Load_ItemTest {
-  
-  @BeforeEach
-  void setUp() throws Exception {
-  }
-  
+  Load_Item li = new Load_Item();
   @Test
   void testLoad_Item() {
-    fail( "Not yet implemented"); // TODO
+    assertEquals("Load Game",li.getText());
   }
   
 }

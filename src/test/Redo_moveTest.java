@@ -2,18 +2,15 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import MainFrame.ChessMenuBar.ChessBar_Menus.Menu_Items.Edit_MenuItems.Redo_move;
+
 class Redo_moveTest {
-  
-  @BeforeEach
-  void setUp() throws Exception {
-  }
-  
+  Redo_move rm = new Redo_move();
   @Test
   void testRedo_move() {
-    fail( "Not yet implemented"); // TODO
+    assertEquals("Redo move",rm.getText());
   }
   
 }

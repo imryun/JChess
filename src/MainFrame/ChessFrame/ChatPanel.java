@@ -36,8 +36,8 @@ public class ChatPanel extends JPanel {
     setLayout( null);
     
     TextAreaScroll.setEnabled( false);
-    TextFiled.setEnabled( false);
-    Sendbutton.setEnabled( false);
+    TextFiled.setEnabled(true);
+    Sendbutton.setEnabled( true);
     add( TextAreaScroll);
     add( TextFiled);
     add( Sendbutton);
@@ -183,8 +183,8 @@ public class ChatPanel extends JPanel {
     }
   }
   
-  private final mytextArea textArea = new mytextArea( 6, 20);
-  private final myTextFiled TextFiled = new myTextFiled( 10);
+  public final mytextArea textArea = new mytextArea( 6, 20);
+  public final myTextFiled TextFiled = new myTextFiled( 10);
   private final mybutton Sendbutton = new mybutton();
   private final JScrollPane TextAreaScroll = new JScrollPane( textArea,
       JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);

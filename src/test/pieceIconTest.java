@@ -1,24 +1,20 @@
 package test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import MainFrame.ChessFrame.players.Pieces.pieceIcon;
+
 class pieceIconTest {
-  
-  @BeforeEach
-  void setUp() throws Exception {
-  }
-  
+  pieceIcon pi = new pieceIcon("PI");
   @Test
   void testPieceIcon() {
-    fail( "Not yet implemented"); // TODO
+    assertEquals("class MainFrame.ChessFrame.players.Pieces.pieceIcon", pi.getClass().toString());
   }
   
   @Test
   void testReturnPieceIcon() {
-    fail( "Not yet implemented"); // TODO
+    assertEquals("class sun.awt.image.ToolkitImage",pi.returnPieceIcon().getClass().toString());
   }
   
 }

@@ -2,28 +2,21 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import MainFrame.ChessFrame.StatusPanel;
+
 class StatusPanelTest {
-  
-  @BeforeEach
-  void setUp() throws Exception {
-  }
-  
+  StatusPanel sp = new StatusPanel();
   @Test
   void testStatusPanel() {
-    fail( "Not yet implemented"); // TODO
+    sp.setToolTipText( "example");
+    assertEquals("example", sp.getToolTipText());
   }
   
   @Test
   void testStart_Again() {
-    fail( "Not yet implemented"); // TODO
-  }
-  
-  @Test
-  void testChangeStatus() {
-    fail( "Not yet implemented"); // TODO
+    try { sp.start_Again();} catch(Exception ed) {fail(ed);}
   }
   
 }

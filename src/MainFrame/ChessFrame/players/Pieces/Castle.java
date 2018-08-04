@@ -12,7 +12,7 @@ import java.awt.Point;
 public class Castle {
   private int X, Y;
   private int pixelX, pixelY;
-  private Point pixelPoint = new Point();
+  private Point pixelPoint = new Point(pixelX, pixelY); 
   private boolean havelife = true;
   private pieceIcon PieceIcon;
   private Point p = new Point();
@@ -54,11 +54,13 @@ public class Castle {
   
   /**
    * setPixels
-   * 
+   * fixed aug 3 7pm
    * @param newpixelX
    * @param newpixelY
    */
   public void setPixels(int newpixelX, int newpixelY) {
+    this.pixelX = newpixelX;
+    this.pixelY = newpixelY;
     pixelPoint.x = newpixelX;
     pixelPoint.y = newpixelY;
   }
@@ -96,8 +98,8 @@ public class Castle {
    * @return Y
    */
   public int returnY() {
-    Y = p.y;
-    return Y;
+    //Y = p.y;
+    return this.Y;
   }
   
   /**
@@ -106,6 +108,7 @@ public class Castle {
    * @param Old
    */
   public void toOld(Point Old) {
+    p.setLocation( Old);
     p.x = Old.x;
     p.y = Old.y;
   }
@@ -116,28 +119,34 @@ public class Castle {
    * @param newPoint
    */
   public void setPoint(Point newPoint) {
-    old.x = p.x;
-    old.y = p.y;
+    setX((int)newPoint.getX());
+    setY((int)newPoint.getY());
+    this.old.x = p.x;
+    this.old.y = p.y;
     X = p.x = newPoint.x;
     Y = p.y = newPoint.y;
   }
   
   /**
    * setX
-   * 
+   * fixed aug 3 8pm
    * @param newX
    */
   public void setX(int newX) {
+    this.X = newX;
+    this.pixelX = newX;
     X = newX;
     p.x = newX;
   }
   
   /**
    * setY
-   * 
+   * fixed aug 3 8pm
    * @param newY
    */
   public void setY(int newY) {
+    this.X = newY;
+    this.pixelX = newY;
     Y = newY;
     p.y = newY;
   }
@@ -300,7 +309,16 @@ public class Castle {
    * 
    * @return
    */
-  public Point GeneratePossible_Moves() {
+  public Point GeneratePossible_Moves() {/*
+    Point[] moves = new Point[100];
+    for (int x=0; x < 10; x++) {
+      for(int y=0; y < 10; y++) {
+        Point thisMove = new Point(x,y);
+        if(!this.PieceInMYway(x,y,thisMove)) {
+          
+        }
+      }
+    }*/
     return new Point();
   }
   

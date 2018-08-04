@@ -2,33 +2,26 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import MainFrame.ChessFrame.MainFrame;
+import MainFrame.ChessMenuBar.ChessBar_Menus.Menu_Items.File_MenuItems.newGame_Dialoge.NewGameDialoge;
+
 class NewGameDialogeTest {
-  
-  @BeforeEach
-  void setUp() throws Exception {
-  }
-  
+  NewGameDialoge ng = new NewGameDialoge(new MainFrame());
   @Test
   void testNewGameDialoge() {
-    fail( "Not yet implemented"); // TODO
+    assertEquals("New Game",ng.getTitle());
   }
   
   @Test
   void testGetIpAddress() {
-    fail( "Not yet implemented"); // TODO
+    assertEquals("127.0.0.1", ng.GetIpAddress());
   }
   
   @Test
   void testGetPortnumber() {
-    fail( "Not yet implemented"); // TODO
-  }
-  
-  @Test
-  void testPaintComponentsGraphics() {
-    fail( "Not yet implemented"); // TODO
+    assertEquals("5000",ng.GetPortnumber());
   }
   
 }

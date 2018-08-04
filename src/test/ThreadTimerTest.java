@@ -2,22 +2,22 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.BeforeEach;
+import javax.swing.JLabel;
+
 import org.junit.jupiter.api.Test;
 
+import MainFrame.ChessFrame.ThreadTimer.ThreadTimer;
+
 class ThreadTimerTest {
-  
-  @BeforeEach
-  void setUp() throws Exception {
-  }
-  
+  ThreadTimer tt = new ThreadTimer(new JLabel());
   @Test
-  void testRun() {
-    fail( "Not yet implemented"); // TODO
+  void testRun() {//TODO: not sure how to test this
+    //tt.run();tt.interrupt();
   }
   
   @Test
   void testThreadTimer() {
+    // TODO: not sure how to test this
     fail( "Not yet implemented"); // TODO
   }
   
